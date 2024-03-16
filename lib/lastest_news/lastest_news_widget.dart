@@ -1,8 +1,11 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'lastest_news_model.dart';
 export 'lastest_news_model.dart';
 
@@ -58,13 +61,13 @@ class _LastestNewsWidgetState extends State<LastestNewsWidget>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 60.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x33000000),
@@ -78,7 +81,7 @@ class _LastestNewsWidgetState extends State<LastestNewsWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -89,9 +92,9 @@ class _LastestNewsWidgetState extends State<LastestNewsWidget>
                         ),
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 4.0, 0.0, 0.0, 0.0),
-                            child: SizedBox(
+                            child: Container(
                               width: 200.0,
                               child: TextFormField(
                                 controller: _model.textController,
@@ -148,21 +151,21 @@ class _LastestNewsWidgetState extends State<LastestNewsWidget>
                 child: Column(
                   children: [
                     Align(
-                      alignment: const Alignment(0.0, 0),
+                      alignment: Alignment(0.0, 0),
                       child: TabBar(
                         labelColor: FlutterFlowTheme.of(context).primaryText,
                         unselectedLabelColor:
                             FlutterFlowTheme.of(context).secondaryText,
                         labelStyle: FlutterFlowTheme.of(context).labelSmall,
-                        unselectedLabelStyle: const TextStyle(),
+                        unselectedLabelStyle: TextStyle(),
                         indicatorColor: FlutterFlowTheme.of(context).tertiary,
-                        padding: const EdgeInsets.all(4.0),
+                        padding: EdgeInsets.all(4.0),
                         tabs: [
                           Tab(
                             text: FFLocalizations.of(context).getText(
                               'db59ytdc' /* Accidents */,
                             ),
-                            icon: const FaIcon(
+                            icon: FaIcon(
                               FontAwesomeIcons.carCrash,
                             ),
                           ),
@@ -170,7 +173,7 @@ class _LastestNewsWidgetState extends State<LastestNewsWidget>
                             text: FFLocalizations.of(context).getText(
                               'bctal1dr' /* Crime */,
                             ),
-                            icon: const Icon(
+                            icon: Icon(
                               Icons.local_police_sharp,
                             ),
                           ),
@@ -178,7 +181,7 @@ class _LastestNewsWidgetState extends State<LastestNewsWidget>
                             text: FFLocalizations.of(context).getText(
                               'x0dfha1o' /* Fires */,
                             ),
-                            icon: const FaIcon(
+                            icon: FaIcon(
                               FontAwesomeIcons.fire,
                             ),
                           ),
