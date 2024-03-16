@@ -27,6 +27,7 @@ class _WeatherWidgetState extends State<WeatherWidget>
     )..addListener(() => setState(() {}));
     WidgetsBinding.instance!.addPostFrameCallback((_) => setState(() {}));
   }
+  
 
   @override
   void dispose() {
